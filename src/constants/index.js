@@ -35,6 +35,7 @@ import {
     twitter,
     yourlogo,
   } from "../assets";
+  import 'react-tooltip/dist/react-tooltip.css'
   
   export const navigation = [
     {
