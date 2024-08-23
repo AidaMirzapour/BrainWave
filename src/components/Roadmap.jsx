@@ -4,6 +4,8 @@ import Heading from "./Heading";
 import { roadmap } from "../constants";
 import { check2, grid, loading1 } from "../assets";
 import Tagline from "./Tagline";
+import Button from "./Button";
+import { Gradient } from "./design/Roadmap";
 
 const Roadmap = () => {
   return (
@@ -24,7 +26,7 @@ const Roadmap = () => {
                   item.colorful ? "bg-conic-gradient" : "bg-n-6"
                 }`}
               >
-                <div className="relative p-8 bg-n-8 rounded-[2rem] overflow-hidden xl:p-15">
+                <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
                   <div className="absolute top-0 left-0 max-w-full">
                     <img
                       src={grid}
@@ -47,23 +49,27 @@ const Roadmap = () => {
                         />
                         <div className="tagline">{status}</div>
                       </div>
-                      <div className="mb-10 -my-10 -mx-15">
-                        <img
-                          src={item.imageUrl}
-                          className="w-full"
-                          width={630}
-                          height={420}
-                          alt={item.title}
-                        />
-                      </div>
-                      <h4 className="h4 mb-4">{item.title}</h4>
-                      <p className="body-2 text-n-4">{item.text}</p>
                     </div>
+                    <div className="mb-10 -my-10 -mx-15">
+                      <img
+                        src={item.imageUrl}
+                        className="w-full"
+                        width={628}
+                        height={426}
+                        alt={item.title}
+                      />
+                    </div>
+                    <h4 className="h4 mb-4">{item.title}</h4>
+                    <p className="body-2 text-n-4">{item.text}</p>
                   </div>
                 </div>
               </div>
             );
           })}
+          <Gradient />
+        </div>
+        <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
+          <Button href="/roadmap">Our roadmap</Button>
         </div>
       </div>
     </Section>
